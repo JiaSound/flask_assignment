@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Diabetes Predictor</title>
+    </head>
+    <body>
+        <h2>Enter Patient Information</h2>
+        <form action="/" method="post">
+            Glucose Level: <input type="number" name="glucose" step="0.1" required> <br><br>
+            Blood Pressure: <input type="number" name="bloodpressure" step="0.1" required> <br><br>
+            Insulin Level: <input type="number" name="insulin" step="0.1" required> <br><br>
+            BMI: <input type="number" name="bmi" step="0.1" required> <br><br>
+            Age: <input type="number" name="age" required> <br><br>
+            Diabetes Pedigree Function: <input type="number" name="diabetespedigreefunction" step="0.001" required> <br><br>
+            <input type="submit" value="Predict">
+        </form>
+        
+        {% if prediction != None %}
+            <h3>Prediction: {{ prediction }}</h3>
+        {% endif %}
+    </body>
+</html>
